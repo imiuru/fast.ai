@@ -10,9 +10,20 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 export_file_url = 'https://drive.google.com/uc?export=download&id=1q6Yk4zLA1sk0vcFF1m6Z9v5_2_dXSFIj'
-export_file_name = 'export.pkl'
+export_file_name = 'multi-class.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+classes_single = ['1', '10', '100', '20', '200', '5', '50', '500', 'inr', 'usd']
+classes_multi = ['inr/50',
+ 'inr/100',
+ 'inr/200',
+ 'inr/500',
+ 'usd/1',
+ 'usd/10',
+ 'usd/100',
+ 'usd/20',
+ 'usd/5',
+ 'usd/50']
+classes = classes_multi
 path = Path(__file__).parent
 
 app = Starlette()
